@@ -48,4 +48,13 @@ class Member extends CI_Controller {
             echo 'update '.$result.' row';
         }
     }
+
+    public function delete($id=''){
+        if(empty($id)){
+            echo 'please enter id';
+        } else {
+        $result = $this->Member_Model->deleteMember($id);
+            echo 'delete '.$result.' row';
+        }
+    }
 }
