@@ -36,8 +36,8 @@ class Member_Model extends CI_Model {
         return $this->db->affected_rows();
     }
 	public function deleteMember($id){
-		$this->db->where(‘id’,$id);
-		$this->db->delete(‘Member’);
+		$this->db->where('id',$id);
+		$this->db->delete('Member');
 		return $this->db->affected_rows();
 	}
 
