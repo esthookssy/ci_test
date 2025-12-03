@@ -61,7 +61,7 @@ class Member extends CI_Controller {
     public function alert($val=''){
         echo "alert";
         $this->load->view('show_alert');
-    
+    d
        
     }
 }
