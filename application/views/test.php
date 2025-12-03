@@ -10,7 +10,7 @@
     
     //echo "สวัสดี ทดสอบ!!"; 
     foreach ($sm_name as $data) {
-        echo '<p>—'.$data->sm_namedd.'<p>';
+        echo '<p>—'.$data->sm_name.'<p>';
     }
     ?>
 </body>
