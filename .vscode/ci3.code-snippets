@@ -1,0 +1,151 @@
+{
+  // ================================
+  //   CodeIgniter 3 Controller
+  // ================================
+  "CodeIgniter Controller": {
+    "prefix": "ci3controller",
+    "body": [
+      "<?php",
+      "defined('BASEPATH') OR exit('No direct script access allowed');",
+      "",
+      "class ${1:Welcome} extends CI_Controller {",
+      "",
+      "  public function __construct() {",
+      "    parent::__construct();",
+      "    $this->load->helper('url');",
+      "    $this->load->model('${2:Model_name}');",
+      "  }",
+      "",
+      "  public function index() {",
+      "    $data = [];",
+      "    $this->load->view('${3:view_file}', $data);",
+      "  }",
+      "}",
+      "?>"
+    ],
+    "description": "Create a CodeIgniter 3 Controller"
+  },
+
+  // ================================
+  //   CodeIgniter 3 Model
+  // ================================
+  "CodeIgniter Model": {
+    "prefix": "ci3model",
+    "body": [
+      "<?php",
+      "defined('BASEPATH') OR exit('No direct script access allowed');",
+      "",
+      "class ${1:Model_name} extends CI_Model {",
+      "",
+      "  public function __construct() {",
+      "    parent::__construct();",
+      "  }",
+      "",
+      "  public function get_data() {",
+      "    return $this->db->get('${2:table}')->result();",
+      "  }",
+      "",
+      "}",
+      "?>"
+    ],
+    "description": "CodeIgniter 3 Model Template"
+  },
+
+  // ================================
+  //   Loader Snippets
+  // ================================
+  "CI3 Load View": {
+    "prefix": "ci3view",
+    "body": ["$this->load->view('${1:view_name}', $${2:data});"],
+    "description": "Load View in CI3"
+  },
+
+  "CI3 Load Model": {
+    "prefix": "ci3loadmodel",
+    "body": ["$this->load->model('${1:Model_name}');"],
+    "description": "Load Model in CI3"
+  },
+
+  "CI3 Load Library": {
+    "prefix": "ci3lib",
+    "body": ["$this->load->library('${1:library_name}');"],
+    "description": "Load Library in CI3"
+  },
+
+  // ================================
+  //   URL Helper Snippets
+  // ================================
+  "CI3 base_url": {
+    "prefix": "ci3base",
+    "body": ["<?= base_url('${1:path}') ?>"],
+    "description": "Insert base_url()"
+  },
+
+  "CI3 site_url": {
+    "prefix": "ci3site",
+    "body": ["<?= site_url('${1:route}') ?>"],
+    "description": "Insert site_url()"
+  },
+
+  "CI3 Redirect": {
+    "prefix": "ci3redirect",
+    "body": ["redirect('${1:controller/method}');"],
+    "description": "CI3 Redirect"
+  },
+
+  // ================================
+  //   Query Builder Snippets
+  // ================================
+  "CI3 Query WHERE": {
+    "prefix": "ci3where",
+    "body": [
+      "$this->db->where('${1:column}', ${2:value});",
+      "$query = $this->db->get('${3:table}');",
+      "return $query->result();"
+    ],
+    "description": "CI3 Query Builder WHERE"
+  },
+
+  "CI3 Query SELECT *": {
+    "prefix": "ci3select",
+    "body": [
+      "$query = $this->db->get('${1:table}');",
+      "return $query->result();"
+    ],
+    "description": "CI3 SELECT Query"
+  },
+
+  "CI3 Query INSERT": {
+    "prefix": "ci3insert",
+    "body": [
+      "$data = [",
+      "  '${1:column}' => ${2:value},",
+      "];",
+      "",
+      "$this->db->insert('${3:table}', $data);"
+    ],
+    "description": "CI3 Query INSERT"
+  },
+
+  "CI3 Query UPDATE": {
+    "prefix": "ci3update",
+    "body": [
+      "$data = [",
+      "  '${1:column}' => ${2:value},",
+      "];",
+      "",
+      "$this->db->where('id', ${3:id});",
+      "$this->db->update('${4:table}', $data);"
+    ],
+    "description": "CI3 Query UPDATE"
+  },
+
+  "CI3 Query DELETE": {
+    "prefix": "ci3delete",
+    "body": [
+      "$this->db->where('${1:column}', ${2:id});",
+      "$this->db->delete('${3:table}');"
+    ],
+    "description": "CI3 Query DELETE"
+  }
+}

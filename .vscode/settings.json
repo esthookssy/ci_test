@@ -1,0 +1,42 @@
+{
+  "files.autoSave": "afterDelay",
+  "php.validate.executablePath": "C:/xampp/php/php.exe",
+  "php.debug.executablePath": "C:/xampp/php/php.exe",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "intelephense.environment.phpVersion": "7.3",
+  "intelephense.environment.includePaths": [
+    "application",
+    "system"
+  ],
+  "intelephense.files.maxSize": 5000000,
+  "intelephense.diagnostics.enable": true,
+  "intelephense.completion.insertUseDeclaration": true,
+  "php-cs-fixer.rules": "@PSR12",
+  "php-cs-fixer.formatHtml": true,
+  "php-cs-fixer.onsave": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "emmet.includeLanguages": {
+    "php": "html"
+  },
+  "path-autocomplete.extensionOnImport": true,
+  "explorer.compactFolders": false
+}

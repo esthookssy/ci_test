@@ -57,4 +57,11 @@ class Member extends CI_Controller {
             echo 'delete '.$result.' row';
         }
     }
+
+    public function alert($val=''){
+        echo "alert";
+        $this->load->view('show_alert');
+    
+       
+    }
 }
