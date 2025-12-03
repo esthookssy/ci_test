@@ -10,11 +10,11 @@ class Member extends CI_Controller {
     public function index() {
         echo 'Test';
     }
-    public function create($username,$password,$name) {
+    public function create($sm_user,$sm_password,$sm_name) {
         $input = array(
-        'username' => $username,
-        'password' => $password,
-        'name' => $name
+        'sm_user' => $sm_user,
+        'sm_password' => $sm_password,
+        'sm_name' => $sm_name
         );
         $result = $this->Member_Model->createMember($input);
         echo 'Insert '.$result.' complete';
@@ -61,6 +61,6 @@ class Member extends CI_Controller {
     public function alert($val=''){
         echo "alert";
         $this->load->view('show_alert');
-       
+       $this->load->view('dfadf');
     }
 }

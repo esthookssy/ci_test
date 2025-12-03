@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "bmewburn.vscode-intelephense-client", // PHP IntelliSense
+    "felixfbecker.php-debug", // PHP Debug (Xdebug)
+    "junstyle.php-cs-fixer", // PHP CS Fixer
+    "esbenp.prettier-vscode", // Prettier formatter
+    "editorconfig.editorconfig", // EditorConfig support
+    "ritwickdey.liveserver", // Live Server (frontend)
+    "formulahendry.auto-rename-tag", // Auto rename HTML tag
+    "formulahendry.auto-close-tag", // Auto close HTML tag
+    "ecmel.vscode-html-css", // HTML/CSS intellisense
+    "ionutvmi.path-autocomplete", // Path autocomplete (สำคัญมากสำหรับ CI3)
+    "alefragnani.project-manager", // Project manager
+    "alefragnani.bookmarks", // Bookmarks
+    "usernamehw.errorlens", // Error highlight ชัดมาก
+    "wayou.vscode-todo-highlight", // TODO highlight
+    "eamodio.gitlens", // GitLens
+    "mehedidracula.php-namespace-resolver" // PHP namespace resolver
+  ]
+}

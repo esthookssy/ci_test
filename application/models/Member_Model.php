@@ -10,12 +10,12 @@ class Member_Model extends CI_Model {
 
     public function createMember($input) {
         $data = array(
-            'sm_user' => $input['username'],
-            'sm_password' => $input['password'],
-            'sm_name' => $input['name']
+            'sm_user' => $input['sm_user'],
+            'sm_password' => $input['sm_password'],
+            'sm_name' => $input['sm_name']
         );
         $this->db->insert('system_member',$data);
-        return $data['name'];
+          return $this->db->insert_id();   // ✔ ถูกต้องที่สุด
     }
 
     public function readMemberAll() {
