@@ -15,7 +15,7 @@ class Test extends CI_Controller
 	}
 	public function show()
 	{
-		$this->load->model('Test_model', 'Test_model'); //ทำการโหลด models เข้ามา
+		$this->load->model('Test_model'); //ทำการโหลด models เข้ามา
 		$data['sm_name'] = $this->Test_model->getName();
 		$this->load->view('test', $data);
 	}
