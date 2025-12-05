@@ -71,4 +71,42 @@ class Member extends CI_Controller
 		$this->load->view('show_alert');
 		$this->load->view('dfadf');
 	}
+
+	public function alertMemberData($id = '')
+{
+    if (empty($id)) {
+        $data['alert'] = [
+            'type' => 'error',
+            'title' => 'ข้อมูลไม่ครบ!',
+            'text' => 'กรุณากรอกรหัสสมาชิก',
+            'redirect' => site_url('member')  // จะ redirect หลังจากกด OK
+        ];
+        $data['member'] = null;
+
+    } else {
+        $memberData = $this->Member_Model->readMemberById($id);
+
+        if (!empty($memberData)) {
+            $data['alert'] = [
+                'type' => 'success',
+                'title' => 'พบข้อมูลสมาชิก',
+                'text' => $memberData[0]->sm_user,
+                'redirect' => null // ไม่ redirect
+            ];
+            $data['member'] = $memberData;
+
+        } else {
+            $data['alert'] = [
+                'type' => 'warning',
+                'title' => 'ไม่พบข้อมูล!',
+                'text' => 'ไม่มีสมาชิกในระบบ',
+                'redirect' => site_url('member')
+            ];
+            $data['member'] = null;
+        }
+    }
+
+    $this->load->view('member_alert_view', $data);
+}
+
 }				
