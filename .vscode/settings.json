@@ -8,8 +8,7 @@
   "editor.formatOnSave": true,
   "intelephense.environment.phpVersion": "7.3",
   "intelephense.environment.includePaths": [
-    "application",
-    "system"
+    "application", "system"
   ],
   "intelephense.files.maxSize": 5000000,
   "intelephense.diagnostics.enable": true,

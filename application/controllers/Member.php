@@ -1,7 +1,9 @@
 <?php
 
 defined('BASEPATH') or exit('No direct script access allowed');
-
+/**
+ * @property Member_Model $Member_Model
+ */
 class Member extends CI_Controller
 {
 	public function __construct()
